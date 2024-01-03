@@ -11,7 +11,7 @@ name: Java CI with Maven
 on:
   push:
     branches: [ "master" ]
-   workflow_dispatch:	
+  # workflow_dispatch:	
 #  pull_request:
 #    branches: [ "master" ]
 
@@ -29,9 +29,9 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-	server-id: docker.io
-        server-username: MAVEN_USERNAME
-        server-password: MAVEN_PASSWORD
+	#server-id: docker.io
+        #server-username: MAVEN_USERNAME
+        #server-password: MAVEN_PASSWORD
 		
 
     - name: Build and Push Docker Image

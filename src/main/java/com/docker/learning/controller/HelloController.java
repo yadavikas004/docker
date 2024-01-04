@@ -10,4 +10,9 @@ public class HelloController {
 	public String hello() {
 		return "Hello World";
 	}
+	
+	@GetMapping("/softshop")
+	public String softshop() {
+		return "Hello!!! You have acccessed the software workshop api.";
+	}
 }

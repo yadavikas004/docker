@@ -39,6 +39,12 @@ jobs:
       
     - name : Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
+
+    - name: Build & Push Image
+      run: 
+        echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "yadavikas" --password-stdin
+        docker image build -t yadavikas/bootimage:latest .
+        docker push yadavikas/bootimage:latest
       
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive

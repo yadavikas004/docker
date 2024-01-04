@@ -41,7 +41,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Build & Push Image
-      run: 
+      run: |
         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "yadavikas" --password-stdin
         docker image build -t yadavikas/bootimage:latest .
         docker push yadavikas/bootimage:latest

@@ -1,5 +1,5 @@
-FROM openjdk
-WORKDIR /usr/src/myapp
-COPY . /usr/src/myapp
+FROM openjdk:17
+WORKDIR /com/docker/learning
+COPY target/docker.jar docker.jar
+EXPOSE 8083
 CMD [ "java", "-jar", "docker.jar" ]
-EXPOSE 8082

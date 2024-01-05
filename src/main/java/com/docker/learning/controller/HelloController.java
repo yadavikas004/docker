@@ -15,4 +15,9 @@ public class HelloController {
 	public String softshop() {
 		return "Hello!!! You have acccessed the software workshop api.";
 	}
+	
+	@GetMapping("/vikas")
+	public String vikas() {
+		return "Hello!!! This is Vikas as Computer Science Student";
+	}
 }
